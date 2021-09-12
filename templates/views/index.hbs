@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="icon" href="/img/weather.png">
+
+    <title>Weather</title>
+</head>
+<body>
+    <div class="main-content">
+        {{>header}}
+
+        <p>
+            Use this site to get your weather
+
+            <form id="form" method="post">
+                <input type="text" name="address" placeholder="enter address" id="address" class="address">
+                <button type="submit">Search</button>
+                
+                <p id="message-1" style="color: red;"></p>
+                <p id="message-2" style="color: green"></p>
+            </form>
+        </p>
+    </div>
+    {{>footer}}
+
+    <script type="text/javascript" src="/js/app.js"></script>
+</body>
+</html>
