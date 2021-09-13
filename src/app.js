@@ -53,7 +53,7 @@ app.get('/weather',(req,res) => {
                     error:err.message
                 })
             }
-            const foreCastPrediction =  `It is currently ${result.temperature} degree out, It feels like ${result.feelslike} `;
+            const foreCastPrediction =  `It is currently ${result.temperature} degree out, It feels like ${result.feelslike}, Wind Speed - ${result.wind_speed} with direction - ${result.wind_degree} degree `;
             const location = response[0].location;
             return res.send({
                 address,
