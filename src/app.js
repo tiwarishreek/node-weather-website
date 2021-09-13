@@ -1,10 +1,11 @@
 const path = require('path');
 const express = require('express');
 const hbs = require('hbs');
-const app = express();
 
 const geoCode = require('./utils/geoCode');
 const forecast = require('./utils/forecast');
+
+const app = express();
 
 app.set('view engine','hbs');
 
@@ -98,7 +99,7 @@ app.get('*',(req,res)=>{
     })
 })
 
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, ()=>{
     const randomNumber = Math.round(Math.abs(Math.random()*1000));
 	console.log('Server started on PORT >> ', PORT, ",Random Nu>>" + randomNumber);

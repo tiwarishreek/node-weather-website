@@ -11,7 +11,7 @@ formElement.addEventListener('submit',(e)=>{
 	e.preventDefault();
 	messageOne.textContent = "";
 	messageTwo.textContent = "Loading...";
-	let url = "http://localhost:5000/weather?address=";
+	let url = "/weather?address=";
 
 	const address = addressElement.value;
 	url += address;
